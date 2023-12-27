@@ -114,7 +114,7 @@ function phone() {
 
     if (phone_input.value) {
         phone_input.classList.remove("error");
-        return `tel:${phone_input.value}`
+        return `tel:${phone_input.value}`;
     }
     phone_input.classList.add("error");
     return 0;
