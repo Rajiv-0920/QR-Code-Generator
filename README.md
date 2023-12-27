@@ -24,7 +24,7 @@
 18. fetch
 19. innerHTML
 
-## Bar Code Contents
+## QR Code Contents
 
 ### E-mail address
 
