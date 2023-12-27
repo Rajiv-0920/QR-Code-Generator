@@ -114,7 +114,7 @@ function phone() {
 
     if (phone_input.value) {
         phone_input.classList.remove("error");
-        return `tel:${phone_input.value}`;
+        return `tel:%2B91${phone_input.value}`;
     }
     phone_input.classList.add("error");
     return 0;
@@ -204,16 +204,18 @@ function whatsapp() {
             })
     })
 
-    let code = ph_code.innerText;
+    let code = ph_code.innerText.split('').filter(ch => ch != '+').join('');
+
     const wh_number = document.getElementById("whatsapp-number");
 
     if (code && wh_number.value) {
         wh_number.classList.remove("error");
-        return `https://wa.me/${wh_number.value}`
+        return `https://wa.me/%2B${code}${wh_number.value}`;
     }
     wh_number.classList.add("error");
     return 0;
 }
+
 
 function sms() {
     const sms_number = document.getElementById("sms-number");
